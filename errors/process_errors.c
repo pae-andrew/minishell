@@ -6,7 +6,7 @@
 /*   By: gcredibl <gcredibl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 17:37:12 by gcredibl          #+#    #+#             */
-/*   Updated: 2021/11/13 19:04:57 by gcredibl         ###   ########.fr       */
+/*   Updated: 2021/11/13 20:12:26 by gcredibl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	process_input_error(size_t errcode)
 	msg[3] = "syntax error near unexpected token `|`\n";
 	msg[4] = "syntax error near unexpected token `;`\n";
 	msg[5] = "syntax error near the redirect token\n";
-	write(2, "minihell: ", 10);
+	write(2, "minishell: ", 11);
 	write(2, msg[errcode], ft_strlen(msg[errcode]));
 	return (-1);
 }

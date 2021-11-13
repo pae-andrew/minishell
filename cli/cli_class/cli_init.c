@@ -6,7 +6,7 @@
 /*   By: gcredibl <gcredibl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 17:35:51 by gcredibl          #+#    #+#             */
-/*   Updated: 2021/11/13 17:35:53 by gcredibl         ###   ########.fr       */
+/*   Updated: 2021/11/13 19:29:39 by gcredibl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	cli_launch_term(t_cli *self)
 		process_syserror();
 	if (tgetent(0, "xterm-256color") == -1)
 		process_syserror();
-	write(1, "minihell > ", 11);
+	write(1, "minishell % ", 12);
 	tputs(save_cursor, 1, ft_putchar);
 }
 
