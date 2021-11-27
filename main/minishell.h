@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcredibl <gcredibl@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sstyx <sstyx@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 17:31:23 by gcredibl          #+#    #+#             */
-/*   Updated: 2021/11/13 19:13:59 by gcredibl         ###   ########.fr       */
+/*   Updated: 2021/11/21 19:32:27 by sstyx            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
 # include <unistd.h>
 # include <signal.h>
 # include "minishell.h"
-# include "libft.h"
-# include "cli.h"
-# include "parser.h"
-# include "exec.h"
+# include "../libft/libft.h"
+# include "../cli/cli_class/cli.h"
+# include "../parser/parser.h"
+# include "../exec/exec.h"
 
 # define APP_NAME "minishell"
 

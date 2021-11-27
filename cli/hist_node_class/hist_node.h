@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   hist_node.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcredibl <gcredibl@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sstyx <sstyx@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 17:36:22 by gcredibl          #+#    #+#             */
-/*   Updated: 2021/11/13 17:36:23 by gcredibl         ###   ########.fr       */
+/*   Updated: 2021/11/21 19:23:47 by sstyx            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 # define HIST_NODE_H
 
 # include <stdlib.h>
-# include "libft.h"
-# include "line.h"
+# include "../../libft/libft.h"
+# include "../line_class/line.h"
 
 typedef struct s_hnode
 {

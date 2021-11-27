@@ -6,7 +6,7 @@
 /*   By: gcredibl <gcredibl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 17:39:06 by gcredibl          #+#    #+#             */
-/*   Updated: 2021/11/13 19:04:27 by gcredibl         ###   ########.fr       */
+/*   Updated: 2021/11/27 15:51:49 by gcredibl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	main(void)
 	minishell_init(&ex);
 	cli_init(&cli);
 	ignore_parent_sig();
-	while (cli_readline(&cli))
+	while ((cli.readline = cli_readline(&cli)))
 	{
 		if (cli.line)
 		{

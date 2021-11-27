@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   process_errors.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcredibl <gcredibl@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sstyx <sstyx@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 17:37:12 by gcredibl          #+#    #+#             */
-/*   Updated: 2021/11/13 20:12:26 by gcredibl         ###   ########.fr       */
+/*   Updated: 2021/11/21 19:26:05 by sstyx            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "../main/minishell.h"
 
 void	process_syserror(void)
 {

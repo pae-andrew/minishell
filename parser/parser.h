@@ -6,7 +6,7 @@
 /*   By: gcredibl <gcredibl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 17:40:07 by gcredibl          #+#    #+#             */
-/*   Updated: 2021/11/13 18:23:51 by gcredibl         ###   ########.fr       */
+/*   Updated: 2021/11/27 15:27:59 by gcredibl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,9 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <stdio.h>
-# include "libft.h"
-# include "errors.h"
-# include "env.h"
-//# include "line.h"
+# include "../libft/libft.h"
+# include "../errors/errors.h"
+# include "../exec/env.h"
 
 typedef enum e_type
 {
@@ -43,7 +42,7 @@ typedef struct s_token
 	void		(*append)(struct s_token *self, char *to_append);
 	void		(*remove)(struct s_token *self, size_t i);
 	void		(*prepare)(struct s_token *self, int exit_status, t_dlist *env);
-	void (*del)(struct s_token	*self);
+	void		(*del)(struct s_token	*self);
 }				t_token;
 
 typedef struct s_lexer
@@ -53,9 +52,9 @@ typedef struct s_lexer
 	t_token	**tokens;
 	size_t	tokens_len;
 
-	void (*del)(struct s_lexer	*self);
-	int (*tokenize)(struct s_lexer	*self);
-	int (*check_grammar)(struct s_lexer	*self);
+	void	(*del)(struct s_lexer	*self);
+	int		(*tokenize)(struct s_lexer	*self);
+	int		(*check_grammar)(struct s_lexer	*self);
 }				t_lexer;
 
 typedef struct s_job
@@ -66,8 +65,7 @@ typedef struct s_job
 	t_list	*redir_in;
 	t_list	*redir_out;
 	t_list	*redir_append;
-
-	void (*del)(struct s_job	*self);
+	void	(*del)(struct s_job	*self);
 }				t_job;
 
 typedef struct s_parser
@@ -80,7 +78,7 @@ typedef struct s_parser
 	size_t	pos;
 	int		exit_status;
 
-	void (*del)(struct s_parser	*self);
+	void	(*del)(struct s_parser	*self);
 }				t_parser;
 
 void	parser_init(t_parser *self, char *string_to_parse, int exit_status,

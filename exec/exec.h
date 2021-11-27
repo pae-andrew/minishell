@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   exec.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcredibl <gcredibl@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sstyx <sstyx@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 17:38:35 by gcredibl          #+#    #+#             */
-/*   Updated: 2021/11/13 19:03:38 by gcredibl         ###   ########.fr       */
+/*   Updated: 2021/11/21 19:28:21 by sstyx            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 # include <sys/types.h>
 # include <sys/wait.h>
-# include "minishell.h"
+# include "../main/minishell.h"
 # include <sys/stat.h>
 # include <fcntl.h>
 # include "env.h"

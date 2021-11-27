@@ -6,11 +6,11 @@
 /*   By: gcredibl <gcredibl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 17:37:34 by gcredibl          #+#    #+#             */
-/*   Updated: 2021/11/13 17:37:35 by gcredibl         ###   ########.fr       */
+/*   Updated: 2021/11/27 18:31:45 by gcredibl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "exec.h"
+#include "../exec.h"
 
 static int	write_arr(char **arr, char *sep)
 {

@@ -6,9 +6,10 @@
 #    By: gcredibl <gcredibl@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/13 17:40:25 by gcredibl          #+#    #+#              #
-#    Updated: 2021/11/13 17:40:25 by gcredibl         ###   ########.fr        #
+#    Updated: 2021/11/27 17:12:33 by gcredibl         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 CLI_DIR		= cli/
 
@@ -46,8 +47,6 @@ EXEC_BUILTIN_SRCS	:= $(addprefix ${EXEC_BUILTIN_DIR}, ${EXEC_BUILTIN_SRCS})
 
 SRCS		= ${MAIN_SRCS} ${CLICL_SRCS} ${LINE_SRCS} ${HNODE_SRCS} ${ERRORS_SRCS} ${PARSE_SRCS} ${EXEC_SRCS} ${EXEC_BUILTIN_SRCS}
 
-#HEADERS		= minishell.h
-
 OBJS		= ${SRCS:.c=.o}
 
 NAME		= minishell
@@ -56,7 +55,8 @@ LIBFT_DIR	= libft/
 
 LIBFT		= libft.a
 
-INCLUDES	= -I${LIBFT_DIR} -I${CLICL_DIR} -I${MAIN_DIR} -I${LINE_DIR} -I${HNODE_DIR} -I${ERRORS_DIR} -I${PARSE_DIR} -I${EXEC_DIR}
+INCLUDES	= -I${CLICL_DIR} -I${MAIN_DIR} -I${LINE_DIR} -I${HNODE_DIR} -I${ERRORS_DIR} -I${PARSE_DIR} -I${EXEC_DIR}
+INC         = ${CLICL_DIR}cli.h ${MAIN_DIR}minishell.h ${LINE_DIR}line.h ${HNODE_DIR}hist_node.h ${ERRORS_DIR}errors.h ${PARSE_DIR}parser.h ${EXEC_DIR}exec.h ${EXEC_DIR}env.h
 
 CC			= gcc
 
@@ -64,21 +64,16 @@ RM			= rm -f
 
 CFLAGS		= -Wall -Wextra -Werror
 
-%.o:		%.c 
+%.o:		%.c ${INC}
 			${CC} ${CFLAGS} ${INCLUDES} -c $< -o ${<:.c=.o}
 
 all:		${NAME}
 
 ${NAME}:	${LIBFT_DIR}${LIBFT} ${OBJS}
-			${CC} ${OBJS} ${INCLUDES} -L${LIBFT_DIR} -lft ${MLXFLAGS} -o ${NAME} -ltermcap
+			${CC} ${OBJS} ${INCLUDES} -L${LIBFT_DIR} -lft -o ${NAME} -ltermcap -fsanitize=address
 
-debug:		${LIBFT_DIR}${LIBFT} ${OBJS}
-			${CC} -ggdb ${OBJS} ${INCLUDES} -L${LIBFT_DIR} -lft ${MLXFLAGS} -o ${NAME} -ltermcap -fsanitize=address -fno-omit-frame-pointer
-
-${LIBFT_DIR}${LIBFT}:	${LIBFT_DIR}
+${LIBFT_DIR}${LIBFT}:	${LIBFT_DIR} ${LIBFT_DIR}libft.h
 			${MAKE} -C ${LIBFT_DIR} bonus
-
-bonus:		${NAME}
 
 clean:
 			${RM} ${OBJS}
@@ -87,7 +82,6 @@ clean:
 fclean:		clean
 			${RM} ${NAME}
 			${MAKE} -C ${LIBFT_DIR} fclean
-#			cd libft && ${MAKE} fclean
 
 re:			fclean all
 

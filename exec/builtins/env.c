@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   env.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcredibl <gcredibl@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sstyx <sstyx@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 17:37:39 by gcredibl          #+#    #+#             */
-/*   Updated: 2021/11/13 17:37:40 by gcredibl         ###   ########.fr       */
+/*   Updated: 2021/11/21 19:27:02 by sstyx            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "exec.h"
+#include "../exec.h"
 
 int	exec_builtin_env(t_exec *e)
 {

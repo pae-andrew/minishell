@@ -6,7 +6,7 @@
 /*   By: gcredibl <gcredibl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 17:36:43 by gcredibl          #+#    #+#             */
-/*   Updated: 2021/11/13 17:36:44 by gcredibl         ###   ########.fr       */
+/*   Updated: 2021/11/27 16:17:00 by gcredibl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,8 @@
 # define LINE_H
 
 # include <stdlib.h>
-# include "libft.h"
-# include "errors.h"
-
-/*
- * A `line` class containing a string which was entered (or copied) into stdin
- * by the user. The string and its length are modified dynamically during the
- * input.
- *
- * Fields:
- * 	char	*str - a pointer to the string itself
- * 	int		len - the length of the string
- *
- * Methods:
- * 	void	append(self, char *to_append, int size) - appends N (N == size)
- * 	chars from the to_append buffer
- *
- * 	char	line_pop_last(self) - removes and returns the last char in the
- * 	string. If there was only one char in the string, frees the pointer 
- *	self->str
-*/
+# include "../../libft/libft.h"
+# include "../../errors/errors.h"
 
 typedef struct s_line
 {

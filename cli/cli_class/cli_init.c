@@ -6,7 +6,7 @@
 /*   By: gcredibl <gcredibl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 17:35:51 by gcredibl          #+#    #+#             */
-/*   Updated: 2021/11/13 19:29:39 by gcredibl         ###   ########.fr       */
+/*   Updated: 2021/11/27 15:52:00 by gcredibl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	cli_init(t_cli *self)
 {
 	self->hist = NULL;
 	self->hist_cur = NULL;
-	self->readline = cli_readline;
+	self->readline = 0;
 	self->line = NULL;
 }
 

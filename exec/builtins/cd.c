@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   cd.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcredibl <gcredibl@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sstyx <sstyx@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 17:37:24 by gcredibl          #+#    #+#             */
-/*   Updated: 2021/11/13 17:37:25 by gcredibl         ###   ########.fr       */
+/*   Updated: 2021/11/21 19:26:46 by sstyx            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "exec.h"
+#include "../exec.h"
 
 static char	*cut_last_dir(char *s, const char *part2)
 {

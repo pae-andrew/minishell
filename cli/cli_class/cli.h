@@ -6,7 +6,7 @@
 /*   By: gcredibl <gcredibl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 17:36:09 by gcredibl          #+#    #+#             */
-/*   Updated: 2021/11/13 19:15:14 by gcredibl         ###   ########.fr       */
+/*   Updated: 2021/11/27 16:59:49 by gcredibl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 # include <unistd.h>
 # include <sys/ioctl.h>
 
-# include "libft.h"
-# include "errors.h"
+# include "../../libft/libft.h"
+# include "../../errors/errors.h"
 # include "../line_class/line.h"
-# include "hist_node.h"
+# include "../hist_node_class/hist_node.h"
 
 typedef struct s_cli
 {
@@ -29,7 +29,7 @@ typedef struct s_cli
 	t_dlist			*hist_cur;
 	struct termios	term;
 	t_line			*line;
-	int (*readline)(struct s_cli	*self);
+	int				readline;
 }				t_cli;
 
 int		cli_readline(t_cli *self);

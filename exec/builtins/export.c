@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   export.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcredibl <gcredibl@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sstyx <sstyx@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 17:37:49 by gcredibl          #+#    #+#             */
-/*   Updated: 2021/11/13 17:37:49 by gcredibl         ###   ########.fr       */
+/*   Updated: 2021/11/21 19:27:07 by sstyx            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "exec.h"
+#include "../exec.h"
 
 static void	add_slash(char **result, char *s, int from, int to)
 {
